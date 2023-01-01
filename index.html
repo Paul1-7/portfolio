@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moises Tarifa</title>
+    <link rel="stylesheet" href="/src/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
+      defer
+    ></script>
+  </head>
+  <body class="font-poppins dark:bg-dark dark:text-white">
+    <header
+      class="flex fixed w-full z-50 top-0 justify-between items-center bg-light px-8 py-2 border-b-black/20 border-b-[1px] md:px-10 lg:py-3 dark:bg-dark/70 dark:border-b-white/20"
+    >
+      <img id="logo" src="assets/svg/logo.svg" class="h-10" />
+      <div class="flex sm:flex-row-reverse">
+        <img
+          id="btn-dark"
+          src="assets/svg/moon.svg"
+          class="w-16 px-4 cursor-pointer sm:px-0 sm:w-8 dark:invert"
+          alt=""
+          height="32"
+        />
+        <div class="btn-border-gradient sm:hidden">
+          <div class="toggle">
+            <span class="toggle-line"></span>
+            <span class="toggle-line"></span>
+            <span class="toggle-line"></span>
+          </div>
+        </div>
+        <nav
+          id="toggle-item"
+          class="absolute transition top-14 right-0 w-screen duration-500 sm:w-auto sm:top-0 sm:relative sm:translate-x-0 sm:duration-[0ms] sm:block bg-white/80 sm:bg-inherit -translate-x-[40rem] dark:bg-dark/80 dark:sm:bg-inherit"
+          role="navigation"
+        >
+          <ul class="font-poppins font-normal sm:flex sm:items-center">
+            <li class="sm:px-2 md:px-4">
+              <a href="#home" class="menu-item relative sm:py-1" data-url="home"
+                >Home
+                <div class="h-[3px] w-full bottom-0 absolute active"></div>
+              </a>
+            </li>
+            <li class="sm:px-2 md:px-4">
+              <a
+                href="#about"
+                class="menu-item relative sm:py-1"
+                data-url="about"
+                >About me
+                <div class="h-[3px] w-full bottom-0 absolute active"></div>
+              </a>
+            </li>
+            <li class="sm:px-2 md:px-4">
+              <a
+                href="#skills"
+                class="menu-item relative sm:py-1 sm:backdrop-blur-none"
+                data-url="skills"
+                >Skills
+                <div class="h-[3px] w-full bottom-0 absolute active"></div>
+              </a>
+            </li>
+            <li class="sm:px-2 md:px-4">
+              <a
+                href="#projects"
+                class="menu-item relative sm:py-1"
+                data-url="projects"
+                >Projects
+                <div class="h-[3px] w-full bottom-0 absolute active"></div>
+              </a>
+            </li>
+            <li class="sm:px-2 md:px-4">
+              <a
+                href="#contact"
+                class="menu-item relative sm:py-1"
+                data-url="contact"
+                >Contact
+                <div class="h-[3px] w-full bottom-0 absolute active"></div>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <section
+        id="home"
+        class="flex flex-col pt-14 justify-evenly h-screen pb-4 md:flex-row"
+      >
+        <main
+          class="flex flex-col justify-end items-center sm:h-full sm:basis-1/2 md:justify-center"
+        >
+          <h1 class="text-center text-2xl lg:text-4xl">
+            Hi, i'm <br /><span
+              class="text-5xl font-extrabold title lg:text-7xl"
+              >Moises Tarifa</span
+            ><br />Frontend developer
+          </h1>
+          <button class="btn-border-gradient my-6">
+            <div
+              class="bg-white hover:bg-light px-4 py-2 rounded-md flex justify-between items-center dark:bg-dark dark:hover:bg-dark-mode"
+            >
+              <img
+                src="assets/svg/download.svg"
+                class="icon dark:invert"
+                alt=""
+              />
+              <span class="font-semibold">Download CV</span>
+            </div>
+          </button>
+        </main>
+        <div
+          class="sm:basis-1/2 sm:h-full flex justify-center items-center"
+          id="main-avatar"
+        >
+          <lottie-player
+            src="./assets/animations/mainAvatar.json"
+            background="transparent"
+            speed="1"
+            style="width: 100%; height: auto"
+            loop
+            autoplay
+          ></lottie-player>
+          <!-- <img
+            src="assets/img/man.png"
+            class="w-full sm:w-2/3 md:w-11/12"
+            alt=""
+            srcset=""
+          /> -->
+        </div>
+      </section>
+      <section id="about" class="flex flex-col justify-center pt-12">
+        <h2
+          class="title pt-4 inline-block text-2xl font-bold mx-auto md:text-3xl"
+        >
+          About me
+        </h2>
+        <div class="pt-4 md:flex md:items-center md:gap-3">
+          <div class="text-center md:basis-1/2 md:p-4 md:text-xl">
+            I am a final year student of computer engineering, passionate about
+            web technologies and looking for new challenges, I consider myself a
+            self-taught person and always willing to learn something new every
+            day.
+          </div>
+          <div class="flex justify-center pt-4 md:basis-1/2">
+            <!-- <img
+              src="assets/img/man.png"
+              class="w-2/3 md:w-11/12 xl:w-1/2"
+              alt=""
+              srcset=""
+            /> -->
+            <lottie-player
+              src="./assets/animations/aboutAvatar.json"
+              background="transparent"
+              speed="1"
+              style="width: 100%; height: auto"
+              loop
+              autoplay
+            ></lottie-player>
+          </div>
+        </div>
+      </section>
+      <section id="skills" class="flex flex-col justify-center pt-12 mt-2">
+        <h2 class="title inline-block text-2xl font-bold mx-auto md:text-3xl">
+          Skills
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 pt-8 gap-8">
+          <article class="card-skill transition hover:scale-110">
+            <img src="assets/svg/html-5.svg" alt="" srcset="" class="h-32" />
+            <span class="font-semibold">Html 5</span>
+          </article>
+          <article class="card-skill transition hover:scale-110">
+            <img src="assets/svg/css-3.svg" alt="" srcset="" class="h-32" />
+            <span class="font-semibold">CSS</span>
+          </article>
+          <article class="card-skill transition hover:scale-110">
+            <img
+              src="assets/svg/javascript.svg"
+              alt=""
+              srcset=""
+              class="h-32"
+            />
+            <span class="font-semibold">JavaScript</span>
+          </article>
+          <article class="card-skill transition hover:scale-110">
+            <img src="assets/svg/sass.svg" alt="" srcset="" class="h-32" />
+            <span class="font-semibold">Sass</span>
+          </article>
+          <article class="card-skill transition hover:scale-110">
+            <img src="assets/svg/react.svg" alt="" srcset="" class="h-32" />
+            <span class="font-semibold">React</span>
+          </article>
+          <article class="card-skill transition hover:scale-110">
+            <img
+              src="assets/svg/material-ui.svg"
+              alt=""
+              srcset=""
+              class="h-32"
+            />
+            <span class="font-semibold">Material UI</span>
+          </article>
+          <article class="card-skill transition hover:scale-110">
+            <img
+              src="assets/svg/github-octocat.svg"
+              alt=""
+              srcset=""
+              class="h-32 md:drop-shadow-md"
+            />
+            <span class="font-semibold">Git</span>
+          </article>
+          <article class="card-skill transition hover:scale-110">
+            <img
+              src="assets/svg/tailwindcss-icon.svg"
+              alt=""
+              srcset=""
+              class="h-32"
+            />
+            <span class="font-semibold">TailwindCSS</span>
+          </article>
+        </div>
+      </section>
+      <section id="projects" class="flex flex-col justify-center pt-12">
+        <h2
+          class="title pt-4 inline-block text-2xl font-bold mx-auto md:text-3xl"
+        >
+          Projects
+        </h2>
+        <div
+          class="grid grid-cols-1 pt-8 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:px-12 place-items-center"
+        >
+          <article
+            class="flex flex-col h-[25rem] shadow-md border-black/10 border-[1px] rounded-md overflow-hidden max-w-xs transition hover:scale-105 hover:shadow-lg dark:border-white/[.03] dark:bg-card-dark backdrop-blur-xs"
+          >
+            <div class="w-full basis-1/2 overflow-hidden rounded-sm">
+              <img
+                class="object-cover w-full"
+                src="https://th.bing.com/th/id/R.da287beab90a66901f82f8e3ad358737?rik=bmbqznB1eNPAcw&pid=ImgRaw&r=0"
+                alt=""
+                srcset=""
+              />
+            </div>
+            <div class="basis-1/2">
+              <div class="p-4">
+                <h3 class="font-semibold text-lg">Titulo</h3>
+                <p class="pt-2 text-sm">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Dolor asperiores ipsa ipsum maxime tempora corrupti debitis
+                  repudiandae
+                </p>
+              </div>
+              <div class="flex justify-evenly">
+                <button class="btn-border-gradient my-6">
+                  <div
+                    class="bg-white hover:bg-light px-4 py-2 rounded-md flex justify-between items-center dark:bg-dark dark:hover:bg-dark-mode"
+                  >
+                    <img
+                      src="assets/svg/github_git_icon_145985.svg"
+                      class="icon dark:invert"
+                      alt=""
+                      srcset=""
+                    />
+                    <span class="text-sm">Source</span>
+                  </div>
+                </button>
+                <button class="btn-border-gradient my-6">
+                  <div
+                    class="bg-white hover:bg-light px-4 py-2 rounded-md flex justify-between items-center dark:bg-dark dark:hover:bg-dark-mode"
+                  >
+                    <img
+                      src="assets/svg/eye-alt.svg"
+                      class="icon dark:invert"
+                      alt=""
+                      srcset=""
+                    />
+                    <span class="text-sm">Demo</span>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </article>
+          <article
+            class="flex flex-col h-[25rem] shadow-md border-black/10 border-[1px] rounded-md overflow-hidden max-w-xs transition hover:scale-105 hover:shadow-lg dark:border-white/[.03] dark:bg-card-dark backdrop-blur-xs"
+          >
+            <div class="w-full basis-1/2 overflow-hidden rounded-sm">
+              <img
+                class="object-cover w-full"
+                src="https://th.bing.com/th/id/R.da287beab90a66901f82f8e3ad358737?rik=bmbqznB1eNPAcw&pid=ImgRaw&r=0"
+                alt=""
+                srcset=""
+              />
+            </div>
+            <div class="basis-1/2">
+              <div class="p-4">
+                <h3 class="font-semibold text-lg">Titulo</h3>
+                <p class="pt-2 text-sm">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Dolor asperiores ipsa ipsum maxime tempora corrupti debitis
+                  repudiandae
+                </p>
+              </div>
+              <div class="flex justify-evenly">
+                <button class="btn-border-gradient my-6">
+                  <div
+                    class="bg-white hover:bg-light px-4 py-2 rounded-md flex justify-between items-center dark:bg-dark dark:hover:bg-dark-mode"
+                  >
+                    <img
+                      src="assets/svg/github_git_icon_145985.svg"
+                      class="icon dark:invert"
+                      alt=""
+                      srcset=""
+                    />
+                    <span class="text-sm">Source</span>
+                  </div>
+                </button>
+                <button class="btn-border-gradient my-6">
+                  <div
+                    class="bg-white hover:bg-light px-4 py-2 rounded-md flex justify-between items-center dark:bg-dark dark:hover:bg-dark-mode"
+                  >
+                    <img
+                      src="assets/svg/eye-alt.svg"
+                      class="icon dark:invert"
+                      alt=""
+                      srcset=""
+                    />
+                    <span class="text-sm">Demo</span>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </article>
+          <article
+            class="flex flex-col h-[25rem] shadow-md border-black/10 border-[1px] rounded-md overflow-hidden max-w-xs transition hover:scale-105 hover:shadow-lg dark:border-white/[.03] dark:bg-card-dark backdrop-blur-xs"
+          >
+            <div class="w-full basis-1/2 overflow-hidden rounded-sm">
+              <img
+                class="object-cover w-full"
+                src="https://th.bing.com/th/id/R.da287beab90a66901f82f8e3ad358737?rik=bmbqznB1eNPAcw&pid=ImgRaw&r=0"
+                alt=""
+                srcset=""
+              />
+            </div>
+            <div class="basis-1/2">
+              <div class="p-4">
+                <h3 class="font-semibold text-lg">Titulo</h3>
+                <p class="pt-2 text-sm">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Dolor asperiores ipsa ipsum maxime tempora corrupti debitis
+                  repudiandae
+                </p>
+              </div>
+              <div class="flex justify-evenly">
+                <button class="btn-border-gradient my-6">
+                  <div
+                    class="bg-white hover:bg-light px-4 py-2 rounded-md flex justify-between items-center dark:bg-dark dark:hover:bg-dark-mode"
+                  >
+                    <img
+                      src="assets/svg/github_git_icon_145985.svg"
+                      class="icon dark:invert"
+                      alt=""
+                      srcset=""
+                    />
+                    <span class="text-sm">Source</span>
+                  </div>
+                </button>
+                <button class="btn-border-gradient my-6">
+                  <div
+                    class="bg-white hover:bg-light px-4 py-2 rounded-md flex justify-between items-center dark:bg-dark dark:hover:bg-dark-mode"
+                  >
+                    <img
+                      src="assets/svg/eye-alt.svg"
+                      class="icon dark:invert"
+                      alt=""
+                      srcset=""
+                    />
+                    <span class="text-sm">Demo</span>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section
+        id="contact"
+        class="flex flex-col justify-center items-center pt-12 px-4 sm:px-0"
+      >
+        <h2
+          class="title pt-4 inline-block text-2xl font-bold text-center md:text-3xl"
+        >
+          Contact
+        </h2>
+        <form
+          action="https://submit-form.com/0OTi2Wi5"
+          method="POST"
+          id="contact_form"
+          class="shadow-md mt-8 border-b-black/20 border-[1px] rounded-md p-8 mb-8 w-full lg:max-w-3xl dark:border-white/[.03] dark:bg-card-dark backdrop-blur-xs"
+        >
+          <h3 class="text-center">Send me a message</h3>
+          <div>
+            <input
+              type="hidden"
+              name="_next"
+              value="https://yourdomain.co/thanks.html"
+            />
+            <input type="hidden" name="_captcha" value="false" />
+            <div class="pt-8 relative">
+              <input
+                id="name"
+                type="text"
+                name="name"
+                class="jsValidator border-b-[2px] border-black w-full p-1 outline-0 rounded-none peer dark:bg-card-dark dark:border-white"
+                autocomplete="none"
+                data-validators="required alphanumeric"
+                required
+              />
+              <label
+                for="name"
+                class="absolute top-7 font-semibold left-2 duration-300 peer-focus:top-4 peer-focus:left-0 peer-focus:text-xs peer-valid:top-4 peer-valid:text-xs peer-valid:left-0"
+                >Your name
+              </label>
+              <p
+                class="error-msg text-red-600 text-xs absolute -bottom-4 dark:text-red-300"
+              ></p>
+            </div>
+            <div class="pt-8 relative">
+              <input
+                id="email"
+                type="text"
+                name="email"
+                class="jsValidator border-b-[2px] w-full border-black p-1 outline-0 rounded-none peer dark:bg-card-dark dark:border-white"
+                autocomplete="none"
+                data-validators="required email"
+                required
+              />
+              <label
+                for="email"
+                class="absolute top-7 font-semibold left-2 duration-300 peer-focus:top-4 peer-focus:left-0 peer-focus:text-xs peer-valid:top-4 peer-valid:text-xs peer-valid:left-0"
+                >Your email
+              </label>
+              <p
+                class="error-msg text-red-600 text-xs absolute -bottom-4 dark:text-red-300"
+              ></p>
+            </div>
+          </div>
+          <div class="pt-8 relative">
+            <textarea
+              id="message"
+              type="text"
+              name="message"
+              class="jsValidator border-b-[2px] w-full h-32 border-black resize-none p-1 outline-0 rounded-none peer dark:bg-card-dark dark:border-white"
+              autocomplete="none"
+              data-validators="required"
+              required
+            ></textarea>
+            <label
+              for="message"
+              class="absolute top-7 font-semibold left-2 duration-300 peer-focus:top-4 peer-focus:left-0 peer-focus:text-xs peer-valid:top-4 peer-valid:text-xs peer-valid:left-0"
+              >Your message
+            </label>
+            <p
+              class="error-msg text-red-600 text-xs absolute -bottom-4 dark:text-red-300"
+            ></p>
+          </div>
+          <div class="w-full flex justify-center">
+            <button
+              type="submit"
+              class="cursor-pointer btn-border-gradient mt-8"
+            >
+              <div
+                class="bg-white hover:bg-light px-4 py-2 rounded-md dark:bg-dark dark:hover:bg-dark-mode"
+              >
+                Submit
+              </div>
+            </button>
+          </div>
+        </form>
+      </section>
+    </div>
+    <!-- <script src="src/js/validator.js" type="module" defer></script> -->
+    <!-- <script src="src/js/app.js" type="module"></script> -->
+    <script src="/main.js" type="module"></script>
+  </body>
+</html>

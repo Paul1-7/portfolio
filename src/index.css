@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+.toggle {
+  @apply dark:bg-dark/90 relative w-9 h-9 bg-white rounded-[5px] flex justify-center items-center cursor-pointer overflow-hidden;
+}
+
+.toggle-line {
+  @apply bg-btn absolute w-5 h-[3px] rounded-[10px] duration-500;
+}
+
+.toggle-line:nth-child(1) {
+  @apply translate-y-[-8px] w-[13px] left-[7px];
+}
+
+.active .toggle-line:nth-child(1) {
+  @apply w-5 translate-y-0 rotate-45 delay-100;
+}
+
+.toggle-line:nth-child(2) {
+  @apply translate-y-[8px] w-[15px] left-[7px];
+}
+
+.active .toggle-line:nth-child(2) {
+  @apply w-5 translate-y-0 rotate-[315deg];
+}
+
+.active .toggle-line:nth-child(3) {
+  @apply translate-x-[60px];
+}
+
+.menu-item {
+  @apply w-full block text-center py-4;
+}
+
+.title {
+  @apply text-transparent bg-clip-text bg-text-color;
+}
+
+.btn-border-gradient {
+  @apply p-[3px] bg-btn rounded-md;
+}
+
+.activeLine,
+.btn-border-gradient:hover,
+.toggle:hover > .toggle-line {
+  @apply bg-btn-hover bg-[length:300%_300%] animate-[animatedgradient_2s_ease_alternate_infinite];
+}
+
+@keyframes animatedgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.icon {
+  @apply w-5 h-5 mr-2;
+}
+
+.card-skill {
+  @apply flex flex-col items-center;
+}
+
+@layer components {
+  .bg-light {
+    @apply bg-white/60 backdrop-blur-md;
+  }
+
+  .bg-dark-mode {
+    @apply bg-dark/60 backdrop-blur-md;
+  }
+}
