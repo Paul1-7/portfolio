@@ -1,6 +1,9 @@
 import JSConfetti from 'js-confetti'
+import { aboutAvatar, mainAvatar } from './lottieAnimations.js'
 import { JSValidator } from './validator.js'
 
+mainAvatar()
+aboutAvatar()
 const myFormValidator = new JSValidator('#contact_form').init().setAjax()
 myFormValidator.setSubmittedCallback(() => {
   const confetti = new JSConfetti()
@@ -60,12 +63,6 @@ menutoggle.onclick = function () {
   menutoggle.classList.toggle('active')
   menuToggleItem.classList.toggle('-translate-x-[40rem]')
 }
-
-// //form
-// form[0].addEventListener('submit', (e) => {
-//   e.preventDefault()
-//   console.log(e)
-// })
 
 //dark mode
 btnDarkMode.addEventListener('click', (e) => {

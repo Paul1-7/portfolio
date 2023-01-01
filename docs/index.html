@@ -4,12 +4,13 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-    <script type="module" crossorigin src="./assets/index-9b4cd6ca.js"></script>
-    <link rel="stylesheet" href="./assets/index-5a504d85.css" />
+    <title>Moises Tarifa - Portfolio</title>
+    <script type="module" crossorigin src="/assets/index-461f2265.js"></script>
+    <link rel="stylesheet" href="/assets/index-2008ca3d.css">
   </head>
   <body>
     <div id="app"></div>
+    
   </body>
 </html>
 <!DOCTYPE html>
@@ -19,23 +20,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Moises Tarifa</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
       rel="stylesheet"
-    />
-    <script
-      src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
-      defer
-    ></script>
+    /> -->
   </head>
-  <body class="font-poppins dark:bg-dark dark:text-white">
+  <body class="font-poppins dark:bg-dark dark:text-white" id="app">
     <header
       class="flex fixed w-full z-50 top-0 justify-between items-center bg-light px-8 py-2 border-b-black/20 border-b-[1px] md:px-10 lg:py-3 dark:bg-dark/70 dark:border-b-white/20"
     >
-      <img id="logo" src="assets/svg/logo.svg" class="h-10" />
+      <img id="logo" src="assets/svg/logo.svg" class="h-10" loading="lazy" />
       <div class="flex sm:flex-row-reverse">
         <img
           id="btn-dark"
@@ -125,6 +122,7 @@
                 src="assets/svg/download.svg"
                 class="icon dark:invert"
                 alt=""
+                loading="lazy"
               />
               <span class="font-semibold">Download CV</span>
             </div>
@@ -133,22 +131,7 @@
         <div
           class="sm:basis-1/2 sm:h-full flex justify-center items-center"
           id="main-avatar"
-        >
-          <lottie-player
-            src="./assets/animations/mainAvatar.json"
-            background="transparent"
-            speed="1"
-            style="width: 100%; height: auto"
-            loop
-            autoplay
-          ></lottie-player>
-          <!-- <img
-            src="assets/img/man.png"
-            class="w-full sm:w-2/3 md:w-11/12"
-            alt=""
-            srcset=""
-          /> -->
-        </div>
+        ></div>
       </section>
       <section id="about" class="flex flex-col justify-center pt-12">
         <h2
@@ -163,22 +146,10 @@
             self-taught person and always willing to learn something new every
             day.
           </div>
-          <div class="flex justify-center pt-4 md:basis-1/2">
-            <!-- <img
-              src="assets/img/man.png"
-              class="w-2/3 md:w-11/12 xl:w-1/2"
-              alt=""
-              srcset=""
-            /> -->
-            <lottie-player
-              src="./assets/animations/aboutAvatar.json"
-              background="transparent"
-              speed="1"
-              style="width: 100%; height: auto"
-              loop
-              autoplay
-            ></lottie-player>
-          </div>
+          <div
+            class="flex justify-center pt-4 md:basis-1/2"
+            id="about-avatar"
+          ></div>
         </div>
       </section>
       <section id="skills" class="flex flex-col justify-center pt-12 mt-2">
@@ -187,11 +158,23 @@
         </h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 pt-8 gap-8">
           <article class="card-skill transition hover:scale-110">
-            <img src="assets/svg/html-5.svg" alt="" srcset="" class="h-32" />
+            <img
+              src="assets/svg/html-5.svg"
+              alt=""
+              srcset=""
+              class="h-32"
+              loading="lazy"
+            />
             <span class="font-semibold">Html 5</span>
           </article>
           <article class="card-skill transition hover:scale-110">
-            <img src="assets/svg/css-3.svg" alt="" srcset="" class="h-32" />
+            <img
+              src="assets/svg/css-3.svg"
+              alt=""
+              srcset=""
+              class="h-32"
+              loading="lazy"
+            />
             <span class="font-semibold">CSS</span>
           </article>
           <article class="card-skill transition hover:scale-110">
@@ -200,15 +183,28 @@
               alt=""
               srcset=""
               class="h-32"
+              loading="lazy"
             />
             <span class="font-semibold">JavaScript</span>
           </article>
           <article class="card-skill transition hover:scale-110">
-            <img src="assets/svg/sass.svg" alt="" srcset="" class="h-32" />
+            <img
+              src="assets/svg/sass.svg"
+              alt=""
+              srcset=""
+              class="h-32"
+              loading="lazy"
+            />
             <span class="font-semibold">Sass</span>
           </article>
           <article class="card-skill transition hover:scale-110">
-            <img src="assets/svg/react.svg" alt="" srcset="" class="h-32" />
+            <img
+              src="assets/svg/react.svg"
+              alt=""
+              srcset=""
+              class="h-32"
+              loading="lazy"
+            />
             <span class="font-semibold">React</span>
           </article>
           <article class="card-skill transition hover:scale-110">
@@ -217,6 +213,7 @@
               alt=""
               srcset=""
               class="h-32"
+              loading="lazy"
             />
             <span class="font-semibold">Material UI</span>
           </article>
@@ -226,6 +223,7 @@
               alt=""
               srcset=""
               class="h-32 md:drop-shadow-md"
+              loading="lazy"
             />
             <span class="font-semibold">Git</span>
           </article>
@@ -235,6 +233,7 @@
               alt=""
               srcset=""
               class="h-32"
+              loading="lazy"
             />
             <span class="font-semibold">TailwindCSS</span>
           </article>
@@ -258,6 +257,7 @@
                 src="https://th.bing.com/th/id/R.da287beab90a66901f82f8e3ad358737?rik=bmbqznB1eNPAcw&pid=ImgRaw&r=0"
                 alt=""
                 srcset=""
+                loading="lazy"
               />
             </div>
             <div class="basis-1/2">
@@ -277,8 +277,9 @@
                     <img
                       src="assets/svg/github_git_icon_145985.svg"
                       class="icon dark:invert"
-                      alt=""
+                      alt="git icon"
                       srcset=""
+                      loading="lazy"
                     />
                     <span class="text-sm">Source</span>
                   </div>
@@ -290,8 +291,9 @@
                     <img
                       src="assets/svg/eye-alt.svg"
                       class="icon dark:invert"
-                      alt=""
+                      alt="demo icon"
                       srcset=""
+                      loading="lazy"
                     />
                     <span class="text-sm">Demo</span>
                   </div>
@@ -306,8 +308,9 @@
               <img
                 class="object-cover w-full"
                 src="https://th.bing.com/th/id/R.da287beab90a66901f82f8e3ad358737?rik=bmbqznB1eNPAcw&pid=ImgRaw&r=0"
-                alt=""
+                alt="project img"
                 srcset=""
+                loading="lazy"
               />
             </div>
             <div class="basis-1/2">
@@ -327,8 +330,9 @@
                     <img
                       src="assets/svg/github_git_icon_145985.svg"
                       class="icon dark:invert"
-                      alt=""
+                      alt="git icon"
                       srcset=""
+                      loading="lazy"
                     />
                     <span class="text-sm">Source</span>
                   </div>
@@ -340,8 +344,9 @@
                     <img
                       src="assets/svg/eye-alt.svg"
                       class="icon dark:invert"
-                      alt=""
+                      alt="demo icon"
                       srcset=""
+                      loading="lazy"
                     />
                     <span class="text-sm">Demo</span>
                   </div>
@@ -356,8 +361,9 @@
               <img
                 class="object-cover w-full"
                 src="https://th.bing.com/th/id/R.da287beab90a66901f82f8e3ad358737?rik=bmbqznB1eNPAcw&pid=ImgRaw&r=0"
-                alt=""
+                alt="project img"
                 srcset=""
+                loading="lazy"
               />
             </div>
             <div class="basis-1/2">
@@ -377,8 +383,9 @@
                     <img
                       src="assets/svg/github_git_icon_145985.svg"
                       class="icon dark:invert"
-                      alt=""
+                      alt="git icon"
                       srcset=""
+                      loading="lazy"
                     />
                     <span class="text-sm">Source</span>
                   </div>
@@ -390,8 +397,9 @@
                     <img
                       src="assets/svg/eye-alt.svg"
                       class="icon dark:invert"
-                      alt=""
+                      alt="demo icon"
                       srcset=""
+                      loading="lazy"
                     />
                     <span class="text-sm">Demo</span>
                   </div>
@@ -499,5 +507,6 @@
     </div>
     <!-- <script src="src/js/validator.js" type="module" defer></script> -->
     <!-- <script src="src/js/app.js" type="module"></script> -->
+    <!-- <script src="/main.js" type="module"></script> -->
   </body>
 </html>

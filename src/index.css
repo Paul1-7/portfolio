@@ -6,6 +6,24 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 400;
+  src: url('/assets/fonts/Poppins-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 600;
+  src: url('/assets/fonts/Poppins-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 700;
+  src: url('/assets/fonts/Poppins-Bold.ttf') format('truetype');
+}
+
 .toggle {
   @apply dark:bg-dark/90 relative w-9 h-9 bg-white rounded-[5px] flex justify-center items-center cursor-pointer overflow-hidden;
 }
