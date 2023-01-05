@@ -116,13 +116,14 @@ a selection of my most highlighted projects, as well as information about my exp
     <meta name="msapplication-TileColor" content="#FFFFFF" />
     <meta
       name="msapplication-TileImage"
-      content="./assets/img/favicons/favicon-144.png"
+      content="/assets/img/favicons/favicon-144.png"
     />
     <meta name="msapplication-config" content="/browserconfig.xml" />
     <!-- ****** faviconit.com img/favicons ****** -->
-
+    
+    
     <script type="module" crossorigin src="./assets/index-76f7fd78.js"></script>
-    <link rel="stylesheet" href="./assets/index-9c1c28ed.css" />
+    <link rel="stylesheet" href="./assets/index-bec897ed.css">
   </head>
   <body class="font-poppins dark:bg-dark dark:text-white" id="app">
     <header
@@ -256,6 +257,7 @@ a selection of my most highlighted projects, as well as information about my exp
                 --bg-end: #c96bf1;
                 --delay: 0s;
                 --content: 'Hi, i’m';
+                --name-animation: a1;
               "
               class="title"
               >Hi, i’m
@@ -281,7 +283,11 @@ a selection of my most highlighted projects, as well as information about my exp
               >Frontend developer</span
             >
           </h1>
-          <button class="btn-border-gradient my-6">
+          <a
+            href="assets/files/CV_Moises_Tarifa.pdf"
+            target="_blank"
+            class="btn-border-gradient my-6"
+          >
             <div
               class="bg-white hover:bg-light px-4 py-2 rounded-md flex justify-between items-center dark:bg-dark dark:hover:bg-dark-mode"
             >
@@ -293,7 +299,7 @@ a selection of my most highlighted projects, as well as information about my exp
               />
               <span class="font-semibold">Download CV</span>
             </div>
-          </button>
+          </a>
         </main>
         <div
           class="sm:basis-1/2 sm:h-full flex self-center"
@@ -415,165 +421,65 @@ a selection of my most highlighted projects, as well as information about my exp
           Projects
         </h2>
         <div
-          class="grid grid-cols-1 pt-8 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:px-12 place-items-center"
+          class="grid grid-cols-1 pt-8 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:px-12 justify-items-center"
         >
           <article
-            class="flex flex-col h-[25rem] shadow-md border-black/10 border-[1px] rounded-md overflow-hidden max-w-xs transition hover:scale-105 hover:shadow-lg dark:border-white/[.03] dark:bg-card-dark backdrop-blur-xs"
+            class="shadow-md border-black/10 border-[1px] rounded-md overflow-hidden max-w-xs transition hover:scale-105 hover:shadow-lg dark:border-white/[.03] dark:bg-card-dark"
           >
-            <div class="w-full basis-1/2 overflow-hidden rounded-sm">
+            <div class="rounded-sm">
               <img
                 class="object-cover w-full"
-                src="https://th.bing.com/th/id/R.da287beab90a66901f82f8e3ad358737?rik=bmbqznB1eNPAcw&pid=ImgRaw&r=0"
-                alt=""
-                srcset=""
+                src="./assets/img/projects/llanta-sur.webp"
+                alt="llata sur img"
                 loading="lazy"
               />
             </div>
-            <div class="basis-1/2">
-              <div class="p-4">
-                <h3 class="font-semibold text-lg">Titulo</h3>
-                <p class="pt-2 text-sm">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Dolor asperiores ipsa ipsum maxime tempora corrupti debitis
-                  repudiandae
-                </p>
-              </div>
-              <div class="flex justify-evenly">
-                <button class="btn-border-gradient my-6">
-                  <div
-                    class="bg-white hover:bg-light px-4 py-2 rounded-md flex justify-between items-center dark:bg-dark dark:hover:bg-dark-mode"
-                  >
-                    <img
-                      src="assets/svg/github_git_icon_145985.svg"
-                      class="icon dark:invert"
-                      alt="git icon"
-                      srcset=""
-                      loading="lazy"
-                    />
-                    <span class="text-sm">Source</span>
-                  </div>
-                </button>
-                <button class="btn-border-gradient my-6">
-                  <div
-                    class="bg-white hover:bg-light px-4 py-2 rounded-md flex justify-between items-center dark:bg-dark dark:hover:bg-dark-mode"
-                  >
-                    <img
-                      src="assets/svg/eye-alt.svg"
-                      class="icon dark:invert"
-                      alt="demo icon"
-                      srcset=""
-                      loading="lazy"
-                    />
-                    <span class="text-sm">Demo</span>
-                  </div>
-                </button>
-              </div>
+            <div class="p-4">
+              <h3 class="font-semibold text-lg">Llanta sur - ecommerce</h3>
+              <p class="pt-2 text-sm text-ellipsis">
+                This project is an online store selling car tires and also
+                includes an administrative management system. This project has
+                been developed with a template to make the development process
+                faster. It is made with React and has been optimized to be
+                responsive and work well on different devices, from cell phones
+                to desktops.
+              </p>
             </div>
-          </article>
-          <article
-            class="flex flex-col h-[25rem] shadow-md border-black/10 border-[1px] rounded-md overflow-hidden max-w-xs transition hover:scale-105 hover:shadow-lg dark:border-white/[.03] dark:bg-card-dark backdrop-blur-xs"
-          >
-            <div class="w-full basis-1/2 overflow-hidden rounded-sm">
-              <img
-                class="object-cover w-full"
-                src="https://th.bing.com/th/id/R.da287beab90a66901f82f8e3ad358737?rik=bmbqznB1eNPAcw&pid=ImgRaw&r=0"
-                alt="project img"
-                srcset=""
-                loading="lazy"
-              />
-            </div>
-            <div class="basis-1/2">
-              <div class="p-4">
-                <h3 class="font-semibold text-lg">Titulo</h3>
-                <p class="pt-2 text-sm">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Dolor asperiores ipsa ipsum maxime tempora corrupti debitis
-                  repudiandae
-                </p>
-              </div>
-              <div class="flex justify-evenly">
-                <button class="btn-border-gradient my-6">
-                  <div
-                    class="bg-white hover:bg-light px-4 py-2 rounded-md flex justify-between items-center dark:bg-dark dark:hover:bg-dark-mode"
-                  >
-                    <img
-                      src="assets/svg/github_git_icon_145985.svg"
-                      class="icon dark:invert"
-                      alt="git icon"
-                      srcset=""
-                      loading="lazy"
-                    />
-                    <span class="text-sm">Source</span>
-                  </div>
-                </button>
-                <button class="btn-border-gradient my-6">
-                  <div
-                    class="bg-white hover:bg-light px-4 py-2 rounded-md flex justify-between items-center dark:bg-dark dark:hover:bg-dark-mode"
-                  >
-                    <img
-                      src="assets/svg/eye-alt.svg"
-                      class="icon dark:invert"
-                      alt="demo icon"
-                      srcset=""
-                      loading="lazy"
-                    />
-                    <span class="text-sm">Demo</span>
-                  </div>
-                </button>
-              </div>
-            </div>
-          </article>
-          <article
-            class="flex flex-col h-[25rem] shadow-md border-black/10 border-[1px] rounded-md overflow-hidden max-w-xs transition hover:scale-105 hover:shadow-lg dark:border-white/[.03] dark:bg-card-dark backdrop-blur-xs"
-          >
-            <div class="w-full basis-1/2 overflow-hidden rounded-sm">
-              <img
-                class="object-cover w-full"
-                src="https://th.bing.com/th/id/R.da287beab90a66901f82f8e3ad358737?rik=bmbqznB1eNPAcw&pid=ImgRaw&r=0"
-                alt="project img"
-                srcset=""
-                loading="lazy"
-              />
-            </div>
-            <div class="basis-1/2">
-              <div class="p-4">
-                <h3 class="font-semibold text-lg">Titulo</h3>
-                <p class="pt-2 text-sm">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Dolor asperiores ipsa ipsum maxime tempora corrupti debitis
-                  repudiandae
-                </p>
-              </div>
-              <div class="flex justify-evenly">
-                <button class="btn-border-gradient my-6">
-                  <div
-                    class="bg-white hover:bg-light px-4 py-2 rounded-md flex justify-between items-center dark:bg-dark dark:hover:bg-dark-mode"
-                  >
-                    <img
-                      src="assets/svg/github_git_icon_145985.svg"
-                      class="icon dark:invert"
-                      alt="git icon"
-                      srcset=""
-                      loading="lazy"
-                    />
-                    <span class="text-sm">Source</span>
-                  </div>
-                </button>
-                <button class="btn-border-gradient my-6">
-                  <div
-                    class="bg-white hover:bg-light px-4 py-2 rounded-md flex justify-between items-center dark:bg-dark dark:hover:bg-dark-mode"
-                  >
-                    <img
-                      src="assets/svg/eye-alt.svg"
-                      class="icon dark:invert"
-                      alt="demo icon"
-                      srcset=""
-                      loading="lazy"
-                    />
-                    <span class="text-sm">Demo</span>
-                  </div>
-                </button>
-              </div>
+            <div class="flex justify-evenly">
+              <a
+                href="https://github.com/Paul1-7/proyectoLlantaSurFrontEnd"
+                class="btn-border-gradient mb-6"
+              >
+                <div
+                  class="bg-white hover:bg-light px-4 py-2 rounded-md flex justify-between items-center dark:bg-dark dark:hover:bg-dark-mode"
+                >
+                  <img
+                    src="assets/svg/github_git_icon_145985.svg"
+                    class="icon dark:invert"
+                    alt="git icon"
+                    srcset=""
+                    loading="lazy"
+                  />
+                  <span class="text-sm">Source</span>
+                </div>
+              </a>
+              <a
+                href="https://llanta-sur.vercel.app/"
+                class="btn-border-gradient mb-6"
+              >
+                <div
+                  class="bg-white hover:bg-light px-4 py-2 rounded-md flex justify-between items-center dark:bg-dark dark:hover:bg-dark-mode"
+                >
+                  <img
+                    src="assets/svg/eye-alt.svg"
+                    class="icon dark:invert"
+                    alt="demo icon"
+                    srcset=""
+                    loading="lazy"
+                  />
+                  <span class="text-sm">Demo</span>
+                </div>
+              </a>
             </div>
           </article>
         </div>
