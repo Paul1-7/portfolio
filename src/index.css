@@ -6,28 +6,35 @@
   box-sizing: border-box;
 }
 
-@layer base {
-  @font-face {
-    font-family: 'Poppins';
-    font-weight: 700;
-    src: url('/assets/fonts/Poppins-Bold.ttf') format('truetype');
-    font-display: 'swap';
-  }
-  @font-face {
-    font-family: 'Poppins';
-    font-weight: 600;
-    src: url('/assets/fonts/Poppins-SemiBold.ttf') format('truetype');
-    font-display: 'swap';
-  }
-  @font-face {
-    font-family: 'Poppins';
-    font-weight: 400;
-    src: url('/assets/fonts/Poppins-Regular.ttf') format('truetype');
-    font-display: 'swap';
-  }
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 600;
+  src: url('/assets/fonts/Poppins-SemiBold.ttf') format('truetype');
+  font-display: 'swap';
+}
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 400;
+  src: url('/assets/fonts/Poppins-Regular.ttf') format('truetype');
+  font-display: 'swap';
+}
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 700;
+  src: url('/assets/fonts/Poppins-Bold.ttf') format('truetype');
+  font-display: 'swap';
 }
 
-.toggle {
+/* scrollbar */
+body::-webkit-scrollbar {
+  @apply w-3;
+}
+
+body::-webkit-scrollbar-thumb {
+  @apply bg-title rounded-md;
+}
+
+.toggle-menu {
   @apply dark:bg-dark/90 relative w-9 h-9 bg-white rounded-[5px] flex justify-center items-center cursor-pointer overflow-hidden;
 }
 
@@ -60,7 +67,33 @@
 }
 
 .title {
-  @apply text-transparent bg-clip-text bg-text-color;
+  @apply relative block;
+  padding: 0.5rem 0.5rem;
+  line-height: 1;
+}
+
+.title::before {
+  content: var(--content);
+  position: absolute;
+  background-image: linear-gradient(90deg, var(--bg-start), var(--bg-end));
+  @apply bg-clip-text text-transparent;
+  inset: 0;
+  padding: 0.5rem 0.5rem;
+  animation: animate-title 9s infinite;
+  animation-delay: var(--delay);
+}
+
+@keyframes animate-title {
+  0%,
+  16.667%,
+  100% {
+    opacity: 1;
+  }
+
+  33.333%,
+  83.333% {
+    opacity: 0;
+  }
 }
 
 .btn-border-gradient {
@@ -69,8 +102,225 @@
 
 .activeLine,
 .btn-border-gradient:hover,
-.toggle:hover > .toggle-line {
+.toggle-menu:hover > .toggle-line {
   @apply bg-btn-hover bg-[length:300%_300%] animate-[animatedgradient_2s_ease_alternate_infinite];
+}
+
+/* toggle dark mode */
+.toggleWrapper {
+  @apply truncate text-white;
+}
+
+.not-visible {
+  @apply opacity-0;
+}
+
+.toggleWrapper input {
+  @apply absolute left-[-99em];
+}
+
+.toggle {
+  @apply cursor-pointer inline-block relative w-[3.125rem] h-[1.875rem] bg-[#83d8ff] rounded-[5.25rem];
+  transition: background-color 200ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.toggle__handler {
+  @apply inline-block relative z-10 top-[.1875rem] left-[.1875rem] w-6 h-6 bg-[#ffcf96] rounded-[3.125rem];
+
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: all 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform: rotate(-45deg);
+}
+
+.toggle__handler .crater {
+  @apply absolute bg-[#e8cda5] opacity-0 rounded-full;
+  transition: opacity 200ms ease-in-out;
+}
+
+.toggle__handler .crater--1 {
+  @apply top-[.5625rem] left-[.3125rem] w-1 h-1;
+}
+
+.toggle__handler .crater--2 {
+  @apply top-[.875rem] left-[.6875rem] w-[.375rem] h-[.375rem];
+}
+
+.toggle__handler .crater--3 {
+  @apply top-[.3125rem] left-[.8125rem] w-1 h-1;
+}
+
+.star {
+  @apply absolute bg-white;
+  transition: all 300ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  border-radius: 50%;
+}
+
+.star--1 {
+  @apply top-1 left-[1.1875rem] z-0 w-5 h-1;
+}
+
+.star--2 {
+  top: 12px;
+  left: 12px;
+  z-index: 1;
+  width: 20px;
+  height: 3px;
+}
+
+.star--3 {
+  top: 18px;
+  left: 22px;
+  z-index: 0;
+  width: 20px;
+  height: 3px;
+}
+
+.star--4,
+.star--5,
+.star--6 {
+  opacity: 0;
+  transition: all 300ms 0 cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.star--4 {
+  top: 18px;
+  left: 6px;
+  z-index: 0;
+  width: 2px;
+  height: 2px;
+  transform: translate3d(3px, 0, 0);
+}
+
+.star--5 {
+  top: 20px;
+  left: 19px;
+  z-index: 0;
+  width: 3px;
+  height: 3px;
+  transform: translate3d(3px, 0, 0);
+}
+
+.star--6 {
+  top: 25px;
+  left: 10px;
+  z-index: 0;
+  width: 2px;
+  height: 2px;
+  transform: translate3d(3px, 0, 0);
+}
+
+input:checked + .toggle {
+  background-color: #749dd6;
+}
+
+input:checked + .toggle:before {
+  color: #749ed7;
+}
+
+input:checked + .toggle:after {
+  color: #fff;
+}
+
+input:checked + .toggle .toggle__handler {
+  background-color: #ffe5b5;
+  transform: translate3d(20px, 0, 0) rotate(0);
+}
+
+input:checked + .toggle .toggle__handler .crater {
+  opacity: 1;
+}
+
+input:checked + .toggle .star--1 {
+  width: 2px;
+  height: 2px;
+}
+
+input:checked + .toggle .star--2 {
+  width: 4px;
+  height: 4px;
+  transform: translate3d(-5px, 0, 0);
+}
+
+input:checked + .toggle .star--3 {
+  width: 2px;
+  height: 2px;
+  transform: translate3d(-7px, 0, 0);
+}
+
+input:checked + .toggle .star--4,
+input:checked + .toggle .star--5,
+input:checked + .toggle .star--6 {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+input:checked + .toggle .star--4 {
+  transition: all 300ms 200ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+input:checked + .toggle .star--5 {
+  transition: all 300ms 300ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+input:checked + .toggle .star--6 {
+  transition: all 300ms 400ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+input:checked + .toggle {
+  background-color: #749dd6;
+}
+
+input:checked + .toggle:before {
+  color: #749ed7;
+}
+
+input:checked + .toggle:after {
+  color: #fff;
+}
+
+input:checked + .toggle .toggle__handler {
+  background-color: #ffe5b5;
+  transform: translate3d(20px, 0, 0) rotate(0);
+}
+
+input:checked + .toggle .toggle__handler .crater {
+  opacity: 1;
+}
+
+input:checked + .toggle .star--1 {
+  width: 2px;
+  height: 2px;
+}
+
+input:checked + .toggle .star--2 {
+  width: 4px;
+  height: 4px;
+  transform: translate3d(-5px, 0, 0);
+}
+
+input:checked + .toggle .star--3 {
+  width: 2px;
+  height: 2px;
+  transform: translate3d(-7px, 0, 0);
+}
+
+input:checked + .toggle .star--4,
+input:checked + .toggle .star--5,
+input:checked + .toggle .star--6 {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+input:checked + .toggle .star--4 {
+  transition: all 300ms 200ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+input:checked + .toggle .star--5 {
+  transition: all 300ms 300ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+input:checked + .toggle .star--6 {
+  transition: all 300ms 400ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
 @keyframes animatedgradient {
@@ -100,5 +350,9 @@
 
   .bg-dark-mode {
     @apply bg-dark/60 backdrop-blur-md;
+  }
+
+  .logo-dark {
+    filter: invert(100%);
   }
 }

@@ -24,18 +24,77 @@ myFormValidator.setSubmittedCallback(() => {
   })
 })
 
-const menutoggle = document.querySelector('.toggle')
+const metaTheme = document.querySelector('meta[name="theme-color"]')
+const metaThemeNavButton = document.querySelector(
+  'meta[name="msapplication-navbutton-color"]'
+)
+const metaThemeApple = document.querySelector(
+  'meta[name="apple-mobile-web-app-status-bar-style"]'
+)
+
+const menutoggle = document.querySelector('.toggle-menu')
 const menuToggleItem = document.querySelector('#toggle-item')
 
-const logo = document.querySelector('#logo')
+const btnDarkMode = document.querySelectorAll('.toggle-dark')
+const btnDarkModeContainer = document.querySelectorAll('.toggleWrapper')
 
-const btnDarkMode = document.querySelector('#btn-dark')
 const html = document.documentElement.classList
-const mode = localStorage.getItem('theme')
-let isDark = true
+const themeStoraged = localStorage.getItem('theme')
+let isDark = themeStoraged === 'dark' ? true : false
 
 const sections = document.querySelectorAll('section')
 const menuItem = document.querySelectorAll('.menu-item')
+
+const metaThemeLight = () => {
+  metaTheme.setAttribute('content', '#fff')
+  metaThemeApple.setAttribute('content', '#fff')
+  metaThemeNavButton.setAttribute('content', '#fff')
+}
+
+const metaThemeDark = () => {
+  metaTheme.setAttribute('content', '#282828')
+  metaThemeApple.setAttribute('content', '#282828')
+  metaThemeNavButton.setAttribute('content', '#282828')
+}
+
+const changeTheme = (index) => {
+  if (isDark) {
+    html.remove('dark')
+    metaThemeLight()
+    localStorage.setItem('theme', 'light')
+    btnDarkMode.forEach((btnDark, i) => {
+      if (i !== index) btnDark.checked = false
+    })
+  } else {
+    html.add('dark')
+    localStorage.setItem('theme', 'dark')
+    metaThemeDark()
+    btnDarkMode.forEach((btnDark, i) => {
+      if (i !== index) btnDark.checked = true
+    })
+  }
+  isDark = !isDark
+}
+
+if (themeStoraged === 'dark') {
+  html.add('dark')
+  metaThemeDark()
+  btnDarkMode.forEach((btnDark) => {
+    btnDark.checked = true
+  })
+} else {
+  html.remove('dark')
+  metaThemeLight()
+  btnDarkMode.forEach((btnDark) => {
+    btnDark.checked = false
+  })
+}
+
+btnDarkMode.forEach((btnDark, index) => {
+  btnDark.addEventListener('click', () => changeTheme(index))
+
+  btnDark.removeEventListener('click', () => changeTheme(index))
+})
 
 const functionObserver = (entries) => {
   entries.forEach((entry) => {
@@ -65,28 +124,8 @@ menutoggle.onclick = function () {
 }
 
 //dark mode
-btnDarkMode.addEventListener('click', (e) => {
-  if (isDark) {
-    html.add('dark')
-    btnDarkMode.src = 'assets/svg/sun.svg'
-    logo.src = 'assets/svg/logo-dark.svg'
-    localStorage.setItem('theme', 'dark')
-    isDark = false
-  } else {
-    html.remove('dark')
-    btnDarkMode.src = 'assets/svg/moon.svg'
-    logo.src = 'assets/svg/logo.svg'
-    localStorage.setItem('theme', 'light')
-    isDark = true
-  }
+window.addEventListener('load', () => {
+  btnDarkModeContainer.forEach((btnDark) => {
+    btnDark.classList.remove('not-visible')
+  })
 })
-
-if (mode === 'dark') {
-  html.add('dark')
-  btnDarkMode.src = 'assets/svg/sun.svg'
-  logo.src = 'assets/svg/logo-dark.svg'
-} else {
-  html.remove('dark')
-  btnDarkMode.src = 'assets/svg/moon.svg'
-  logo.src = 'assets/svg/logo.svg'
-}

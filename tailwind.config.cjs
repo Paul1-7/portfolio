@@ -27,12 +27,13 @@ module.exports = {
         btn: 'linear-gradient(45deg,#d42b56,#ef9070,#b3287e);',
         'btn-hover':
           'linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);',
-        'text-color': 'linear-gradient(45deg,#d42b56,#ef9070,#b3287e);'
+        title: 'linear-gradient(90deg,#d42b56,#ef9070)'
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif']
       }
     }
   },
+
   plugins: []
 }

@@ -26,9 +26,103 @@ a selection of my most highlighted projects, as well as information about my exp
       property="og:image"
       content="https://res.cloudinary.com/paul1-7/image/upload/v1672597016/portfolio/img-content_oegnbp.jpg"
     />
+    <meta name="theme-color" content="#fff" />
+    <meta name="msapplication-navbutton-color" content="#fff" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#fff" />
+    <!-- ****** faviconit.com favicons ****** -->
+    <link rel="shortcut icon" href="./assets/img/favicons/favicon.ico" />
+    <link
+      rel="icon"
+      sizes="16x16 32x32 64x64"
+      href="./assets/img/favicons/favicon.ico"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="196x196"
+      href="./assets/img/favicons/favicon-192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="160x160"
+      href="./assets/img/favicons/favicon-160.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="./assets/img/favicons/favicon-96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="64x64"
+      href="./assets/img/favicons/favicon-64.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/img/favicons/favicon-32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/img/favicons/favicon-16.png"
+    />
+    <link rel="apple-touch-icon" href="./assets/img/favicons/favicon-57.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="./assets/img/favicons/favicon-114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="./assets/img/favicons/favicon-72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="./assets/img/favicons/favicon-144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="./assets/img/favicons/favicon-60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="./assets/img/favicons/favicon-120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="./assets/img/favicons/favicon-76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="./assets/img/favicons/favicon-152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/img/favicons/favicon-180.png"
+    />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta
+      name="msapplication-TileImage"
+      content="./assets/img/favicons/favicon-144.png"
+    />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+    <!-- ****** faviconit.com img/favicons ****** -->
 
-    <script type="module" crossorigin src="./assets/index-7bbb17d4.js"></script>
-    <link rel="stylesheet" href="./assets/index-6db1acf5.css" />
+    <script type="module" crossorigin src="./assets/index-76f7fd78.js"></script>
+    <link rel="stylesheet" href="./assets/index-9c1c28ed.css" />
   </head>
   <body class="font-poppins dark:bg-dark dark:text-white" id="app">
     <header
@@ -37,25 +131,39 @@ a selection of my most highlighted projects, as well as information about my exp
       <img
         id="logo"
         src="assets/svg/logo.svg"
-        class="h-10"
+        class="h-10 dark:logo-dark"
         loading="lazy"
         alt="logo"
       />
+
       <div class="flex sm:flex-row-reverse">
-        <img
-          id="btn-dark"
-          src="assets/svg/moon.svg"
-          class="w-16 px-4 cursor-pointer sm:px-0 sm:w-8 dark:invert"
-          alt=""
-          height="32"
-        />
+        <div
+          class="toggleWrapper not-visible flex mr-4 sm:hidden"
+          id="toggleWrapper"
+        >
+          <input type="checkbox" class="dn toggle-dark" id="toggle-dark1" />
+          <label for="toggle-dark1" class="toggle self-center">
+            <span class="toggle__handler">
+              <span class="crater crater--1"></span>
+              <span class="crater crater--2"></span>
+              <span class="crater crater--3"></span>
+            </span>
+            <span class="star star--1"></span>
+            <span class="star star--2"></span>
+            <span class="star star--3"></span>
+            <span class="star star--4"></span>
+            <span class="star star--5"></span>
+            <span class="star star--6"></span>
+          </label>
+        </div>
         <div class="btn-border-gradient sm:hidden">
-          <div class="toggle">
+          <div class="toggle-menu">
             <span class="toggle-line"></span>
             <span class="toggle-line"></span>
             <span class="toggle-line"></span>
           </div>
         </div>
+
         <nav
           id="toggle-item"
           class="absolute transition top-14 right-0 w-screen duration-500 sm:w-auto sm:top-0 sm:relative sm:translate-x-0 sm:duration-[0ms] sm:block bg-white/80 sm:bg-inherit -translate-x-[40rem] dark:bg-dark/80 dark:sm:bg-inherit"
@@ -104,6 +212,31 @@ a selection of my most highlighted projects, as well as information about my exp
                 <div class="h-[3px] w-full bottom-0 absolute active"></div>
               </a>
             </li>
+            <li>
+              <div
+                class="toggleWrapper not-visible hidden sm:block"
+                id="toggleWrapper"
+              >
+                <input
+                  type="checkbox"
+                  class="dn toggle-dark"
+                  id="toggle-dark2"
+                />
+                <label for="toggle-dark2" class="toggle">
+                  <span class="toggle__handler">
+                    <span class="crater crater--1"></span>
+                    <span class="crater crater--2"></span>
+                    <span class="crater crater--3"></span>
+                  </span>
+                  <span class="star star--1"></span>
+                  <span class="star star--2"></span>
+                  <span class="star star--3"></span>
+                  <span class="star star--4"></span>
+                  <span class="star star--5"></span>
+                  <span class="star star--6"></span>
+                </label>
+              </div>
+            </li>
           </ul>
         </nav>
       </div>
@@ -111,15 +244,42 @@ a selection of my most highlighted projects, as well as information about my exp
     <div class="container">
       <section
         id="home"
-        class="flex flex-col pt-14 justify-evenly h-screen pb-4 md:flex-row"
+        class="flex flex-col justify-evenly min-h-screen pt-20 md:pt-0 pb-4 md:flex-row"
       >
         <main
-          class="flex flex-col justify-end items-center sm:h-full sm:basis-1/2 md:justify-center"
+          class="flex flex-col justify-end items-center sm:basis-1/2 md:justify-center"
         >
-          <h1 class="text-center text-2xl lg:text-4xl">
-            Hi, i'm <br /><span class="text-5xl font-bold title lg:text-7xl"
+          <h1 class="text-center text-2xl lg:text-4xl font-bold w-full">
+            <span
+              style="
+                --bg-start: #ff3535;
+                --bg-end: #c96bf1;
+                --delay: 0s;
+                --content: 'Hi, i’m';
+              "
+              class="title"
+              >Hi, i’m
+            </span>
+            <span
+              style="
+                --content: 'Moises Tarifa';
+                --bg-start: #d42b56;
+                --bg-end: #ef9070;
+                --delay: 3s;
+              "
+              class="text-5xl title lg:text-7xl"
               >Moises Tarifa</span
-            ><br />Frontend developer
+            >
+            <span
+              style="
+                --content: 'Frontend developer';
+                --bg-start: #ff4d4d;
+                --bg-end: #f9cb28;
+                --delay: 6s;
+              "
+              class="title"
+              >Frontend developer</span
+            >
           </h1>
           <button class="btn-border-gradient my-6">
             <div
@@ -136,22 +296,22 @@ a selection of my most highlighted projects, as well as information about my exp
           </button>
         </main>
         <div
-          class="sm:basis-1/2 sm:h-full flex justify-center items-center"
+          class="sm:basis-1/2 sm:h-full flex self-center"
           id="main-avatar"
         ></div>
       </section>
       <section id="about" class="flex flex-col justify-center pt-12">
         <h2
-          class="title pt-4 inline-block text-2xl font-bold mx-auto md:text-3xl"
+          class="bg-title bg-clip-text text-transparent pt-4 inline-block text-2xl font-bold mx-auto md:text-3xl"
         >
           About me
         </h2>
         <div class="pt-4 md:flex md:items-center md:gap-3">
           <div class="text-center md:basis-1/2 md:p-4 md:text-xl">
-            I am a final year student of computer engineering, passionate about
-            web technologies and looking for new challenges, I consider myself a
-            self-taught person and always willing to learn something new every
-            day.
+            Hello, my name is Moises Tarifa and I am a front-end developer with
+            a passion for creating attractive and functional websites and
+            applications. I am a self-taught person and I am always looking for
+            new challenges and opportunities to learn and grow in my career,
           </div>
           <div
             class="flex justify-center pt-4 md:basis-1/2"
@@ -160,7 +320,9 @@ a selection of my most highlighted projects, as well as information about my exp
         </div>
       </section>
       <section id="skills" class="flex flex-col justify-center pt-12 mt-2">
-        <h2 class="title inline-block text-2xl font-bold mx-auto md:text-3xl">
+        <h2
+          class="bg-title bg-clip-text text-transparent inline-block text-2xl font-bold mx-auto md:text-3xl"
+        >
           Skills
         </h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 pt-8 gap-8">
@@ -248,7 +410,7 @@ a selection of my most highlighted projects, as well as information about my exp
       </section>
       <section id="projects" class="flex flex-col justify-center pt-12">
         <h2
-          class="title pt-4 inline-block text-2xl font-bold mx-auto md:text-3xl"
+          class="bg-title bg-clip-text text-transparent pt-4 inline-block text-2xl font-bold mx-auto md:text-3xl"
         >
           Projects
         </h2>
@@ -421,7 +583,7 @@ a selection of my most highlighted projects, as well as information about my exp
         class="flex flex-col justify-center items-center pt-12 px-4 sm:px-0"
       >
         <h2
-          class="title pt-4 inline-block text-2xl font-bold text-center md:text-3xl"
+          class="bg-title bg-clip-text text-transparent pt-4 inline-block text-2xl font-bold text-center md:text-3xl"
         >
           Contact
         </h2>
