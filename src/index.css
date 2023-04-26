@@ -373,4 +373,8 @@ input:checked + .toggle .star--6 {
   .logo-dark {
     filter: invert(100%);
   }
+
+  .h-fill-available {
+    height: -webkit-fill-available;
+  }
 }
